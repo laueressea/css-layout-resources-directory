@@ -1,0 +1,29 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.main-title {
+  color: purple;
+  text-transform: uppercase;
+}
+.main-title:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+article {
+  width: 80%;
+  padding-left: 10%;
+}

@@ -1,0 +1,9 @@
+GIT
+
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+https://readwrite.com/2013/10/02/github-for-beginners-part-2/
+http://rogerdudler.github.io/git-guide/index.es.html
+
+BETTER CSS
+
+https://medium.freecodecamp.org/how-to-get-better-at-writing-css-a1732c32a72f
