@@ -1,2 +1,2 @@
 # css-layout-resources-directory
-List of useful resources for css layout.
+Lista de recursos útiles para css layout. 
