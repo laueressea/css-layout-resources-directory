@@ -1,0 +1,128 @@
+/* SETTINGS */
+
+$breakpoints: (
+  xs: 475px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1800px
+);
+
+@mixin media-breakpoint-down($bp) {
+  @media (max-width: (map-get($breakpoints, $bp) - 1)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($bp) {
+  @media (min-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($min, $max) {
+  @media (min-width: map-get($breakpoints, $min)) and (max-width: (map-get($breakpoints, $max) - 1)) {
+    @content;
+  }
+}
+
+/* MAIN */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__title {
+    color: green;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__article {
+    width: 80%;
+    padding-left: 10%;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0%;
+    }
+
+    &__title {
+      font-size: 2em;
+      font-weight: 700;
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+      font-size: 0.9em;
+    }
+  }
+}
+
+.article__list {
+  margin-bottom: 30px;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    color: lightblue;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      margin-right: 10px;
+
+      &:hover {
+        color: purple;
+        cursor: pointer;
+      }
+    }
+
+    &__lang {
+      color: lightblue;
+      font-size: 0.8em;
+      line-height: 0.8em;
+    }
+  }
+}

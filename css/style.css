@@ -1,3 +1,5 @@
+/* SETTINGS */
+/* MAIN */
 body {
   width: 100%;
   min-height: 100vh;
@@ -6,8 +8,19 @@ body {
   box-sizing: border-box;
   background-color: black;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
-main {
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,15 +28,65 @@ main {
   max-width: 700px;
   margin: 0 auto;
 }
-.main-title {
-  color: purple;
+.main-content__title {
+  color: green;
   text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.main-title:hover {
-  color: lightblue;
-  cursor: pointer;
+.main-content__subtitle {
+  margin-bottom: 30px;
 }
-article {
+@media (max-width: 767px) {
+  .main-content__subtitle {
+    text-align: center;
+  }
+}
+.main-content__article {
   width: 80%;
   padding-left: 10%;
 }
+@media (max-width: 767px) {
+  .main-content__article {
+    padding-left: 0%;
+  }
+}
+.main-content__article__title {
+  font-size: 2em;
+  font-weight: 700;
+  color: green;
+  margin-bottom: 10px;
+}
+.main-content__article__subtitle {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.article__list {
+  margin-bottom: 30px;
+}
+.article__list__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  color: lightblue;
+}
+.article__list__item {
+  display: flex;
+  align-items: center;
+}
+.article__list__item__link {
+  margin-right: 10px;
+}
+.article__list__item__link:hover {
+  color: purple;
+  cursor: pointer;
+}
+.article__list__item__lang {
+  color: lightblue;
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
+
+/*# sourceMappingURL=style.css.map */
